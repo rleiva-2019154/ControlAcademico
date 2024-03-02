@@ -7,12 +7,6 @@ const assignmentSchema = Schema({
         require: true,
         ref: 'curso'
     },
-    teacher: {
-        type: Schema.ObjectId,
-        lowerCase: true,
-        require: true,
-        ref: 'user'
-    },
     students: {
         type: Schema.ObjectId,
         lowerCase: true,

@@ -11,6 +11,7 @@ import cors from 'cors'
 import { config } from "dotenv" 
 import userRoutes from '../src/user/user.routes.js'
 import courseRoutes from '../src/course/course.routes.js'
+import assignmentRoutes from '../src/assignment/assignment.routes.js'
 
 //Configuraciones
 const app = express()
@@ -28,6 +29,7 @@ app.use(morgan('dev')) //Logs de solicitudes al servidor HTTP
 //Declaración de rutas
 app.use(userRoutes)
 app.use('/course', courseRoutes)
+app.use(assignmentRoutes)
 
 //Levantar el servidor
 export const initServer = () => {

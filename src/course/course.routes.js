@@ -1,7 +1,14 @@
 'use strict'
 import {Router} from "express";
 import { validateJwt, isAdmin } from '../middlewares/validate.jwt.js'
-import { createCourse, crearCurso, test, get, update, deleteC, search} from "./course.controller.js";
+import { 
+    createCourse, 
+    crearCurso, 
+    test, 
+    get, 
+    update, 
+    deleteC, 
+    search} from "./course.controller.js";
 
 const api = Router()
 
