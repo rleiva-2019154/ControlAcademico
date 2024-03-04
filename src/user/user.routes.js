@@ -11,7 +11,7 @@ api.post('/login', login)
 //RUTAS PRIVADAS (solo ususarios logeados)
                 //Middleware
 api.get('/test', [validateJwt, isAdmin], test)
-api.put('/update/:id', [validateJwt], update) //Middleware -> Funciones intermedias que sirven para validar
-api.delete('/delete/:id', [validateJwt], deleteUser)
+api.put('/update/:id', /*[validateJwt],*/ update) //Middleware -> Funciones intermedias que sirven para validar
+api.delete('/delete/:id', /*[validateJwt],*/ deleteUser)
 
 export default api

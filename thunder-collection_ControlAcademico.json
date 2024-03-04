@@ -1,35 +1,35 @@
 {
     "client": "Thunder Client",
     "collectionName": "ControlAcademico",
-    "dateExported": "2024-02-23T01:30:15.987Z",
+    "dateExported": "2024-03-04T03:23:21.085Z",
     "version": "1.1",
     "folders": [
         {
-            "_id": "3a9dedfa-257d-4d07-bfe9-1d4fd35e4264",
+            "_id": "1abb2f8f-a380-439a-8a70-f736c6ce61bd",
             "name": "Student",
             "containerId": "",
-            "created": "2024-02-23T01:08:11.364Z",
+            "created": "2024-03-02T19:34:33.252Z",
             "sortNum": 10000
         },
         {
-            "_id": "89741623-b66e-478d-9d1a-eab44168d265",
+            "_id": "c3832267-7414-4fe9-b06e-de2fa3aa43d8",
             "name": "UserAdmin",
             "containerId": "",
-            "created": "2024-02-23T01:08:22.025Z",
+            "created": "2024-03-02T19:34:33.253Z",
             "sortNum": 20000
         }
     ],
     "requests": [
         {
-            "_id": "6fa64141-4c4f-43e7-af1b-f836030c9e6b",
-            "colId": "6fb03afa-afca-452d-a9f8-45e3ef12b24c",
-            "containerId": "89741623-b66e-478d-9d1a-eab44168d265",
+            "_id": "e434ec0a-5cd5-4e35-a54f-af74229b2820",
+            "colId": "be56b4ca-0065-48aa-8fda-ee4c1998e8ad",
+            "containerId": "c3832267-7414-4fe9-b06e-de2fa3aa43d8",
             "name": "login",
             "url": "/login",
             "method": "POST",
             "sortNum": 5000,
-            "created": "2024-02-23T00:19:45.390Z",
-            "modified": "2024-02-23T01:09:15.835Z",
+            "created": "2024-03-02T19:34:33.253Z",
+            "modified": "2024-03-02T19:45:49.202Z",
             "headers": [],
             "params": [],
             "body": {
@@ -38,30 +38,30 @@
                 "form": [
                     {
                         "name": "username",
-                        "value": "admin"
+                        "value": "user"
                     },
                     {
                         "name": "password",
-                        "value": "12345678"
+                        "value": "useAdmin"
                     }
                 ]
             },
             "tests": []
         },
         {
-            "_id": "e3bea951-a2ba-4311-82d2-7f6dc6e719ad",
-            "colId": "6fb03afa-afca-452d-a9f8-45e3ef12b24c",
-            "containerId": "89741623-b66e-478d-9d1a-eab44168d265",
+            "_id": "77bcbcc1-3a21-47ef-9308-59a6757d7056",
+            "colId": "be56b4ca-0065-48aa-8fda-ee4c1998e8ad",
+            "containerId": "c3832267-7414-4fe9-b06e-de2fa3aa43d8",
             "name": "addCourse",
             "url": "/course/crearCurso",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-23T00:19:45.391Z",
-            "modified": "2024-02-23T00:35:00.132Z",
+            "created": "2024-03-02T19:34:33.254Z",
+            "modified": "2024-03-02T19:59:36.856Z",
             "headers": [
                 {
                     "name": "token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQ3ZTU2NzUxY2MzMGE5NWQ3MjEyMjYiLCJ1c2VybmFtZSI6InVzZXIiLCJuYW1lIjoidXNlciIsInJvbGUiOiJURUFDSEVSX1JPTEUiLCJpYXQiOjE3MDg2NDgxNDksImV4cCI6MTcwODY1ODk0OX0.7t4d7SLDihA_rtrWfes3gpUUe2I93EmgpgmRxn5m_ro"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUzODE4OGQ3MGIyYmY2NjQ1ZTAyMGUiLCJ1c2VybmFtZSI6InVzZXIiLCJuYW1lIjoidXNlciIsInJvbGUiOiJURUFDSEVSX1JPTEUiLCJpYXQiOjE3MDk0MDg3NDksImV4cCI6MTcwOTQxOTU0OX0.Y0N_-SSdiqYmy7a3iMG2-qoVw8QHfDhzcUOIldzYq9M"
                 }
             ],
             "params": [],
@@ -71,11 +71,11 @@
                 "form": [
                     {
                         "name": "name",
-                        "value": "Lenguaje"
+                        "value": "Fisica"
                     },
                     {
                         "name": "description",
-                        "value": "Lectura"
+                        "value": "Ciencias exactas"
                     },
                     {
                         "name": "grade",
@@ -83,22 +83,22 @@
                     },
                     {
                         "name": "teacher",
-                        "value": "65d36c55b669692092349c61"
+                        "value": "65e38188d70b2bf6645e020e"
                     }
                 ]
             },
             "tests": []
         },
         {
-            "_id": "1300f281-2aed-421c-afd5-051057d7d9ed",
-            "colId": "6fb03afa-afca-452d-a9f8-45e3ef12b24c",
-            "containerId": "3a9dedfa-257d-4d07-bfe9-1d4fd35e4264",
+            "_id": "9fa614e2-b516-44ee-8afc-3b324f344105",
+            "colId": "be56b4ca-0065-48aa-8fda-ee4c1998e8ad",
+            "containerId": "1abb2f8f-a380-439a-8a70-f736c6ce61bd",
             "name": "registerStudent",
             "url": "/registerStudent",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-23T00:19:45.396Z",
-            "modified": "2024-02-23T00:24:31.354Z",
+            "created": "2024-03-02T19:34:33.259Z",
+            "modified": "2024-03-04T02:20:56.554Z",
             "headers": [],
             "params": [],
             "body": {
@@ -115,7 +115,7 @@
                     },
                     {
                         "name": "username",
-                        "value": "rleiva"
+                        "value": "Oleiva"
                     },
                     {
                         "name": "password",
@@ -134,19 +134,19 @@
             "tests": []
         },
         {
-            "_id": "912b8f34-1f35-416b-b80e-3f114b56335f",
-            "colId": "6fb03afa-afca-452d-a9f8-45e3ef12b24c",
-            "containerId": "89741623-b66e-478d-9d1a-eab44168d265",
+            "_id": "18080b7e-0d5b-4157-a1d8-fb3ce7253cd7",
+            "colId": "be56b4ca-0065-48aa-8fda-ee4c1998e8ad",
+            "containerId": "c3832267-7414-4fe9-b06e-de2fa3aa43d8",
             "name": "updateCourse",
-            "url": "/course/update/65d7e8349f9572f2ced5891d",
+            "url": "/course/update/65e533181b442a6bfa05957a",
             "method": "PUT",
             "sortNum": 20000,
-            "created": "2024-02-23T00:19:45.392Z",
-            "modified": "2024-02-23T00:35:32.930Z",
+            "created": "2024-03-02T19:34:33.256Z",
+            "modified": "2024-03-04T03:21:30.197Z",
             "headers": [
                 {
                     "name": "token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQ3ZTU2NzUxY2MzMGE5NWQ3MjEyMjYiLCJ1c2VybmFtZSI6InVzZXIiLCJuYW1lIjoidXNlciIsInJvbGUiOiJURUFDSEVSX1JPTEUiLCJpYXQiOjE3MDg2NDgxNDksImV4cCI6MTcwODY1ODk0OX0.7t4d7SLDihA_rtrWfes3gpUUe2I93EmgpgmRxn5m_ro"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUzODE4OGQ3MGIyYmY2NjQ1ZTAyMGUiLCJ1c2VybmFtZSI6InVzZXIiLCJuYW1lIjoidXNlciIsInJvbGUiOiJURUFDSEVSX1JPTEUiLCJpYXQiOjE3MDk1MTkyMjYsImV4cCI6MTcwOTUzMDAyNn0.RxFXm-arXtZUksEAzdK_rhYYRqkwUBfVBQggi-fsJ5A"
                 }
             ],
             "params": [],
@@ -163,15 +163,15 @@
             "tests": []
         },
         {
-            "_id": "79c773e4-6d37-45e9-b588-0ecaf6368ccf",
-            "colId": "6fb03afa-afca-452d-a9f8-45e3ef12b24c",
-            "containerId": "3a9dedfa-257d-4d07-bfe9-1d4fd35e4264",
+            "_id": "3911dfc1-1dd9-4172-bbe8-b67eab304093",
+            "colId": "be56b4ca-0065-48aa-8fda-ee4c1998e8ad",
+            "containerId": "1abb2f8f-a380-439a-8a70-f736c6ce61bd",
             "name": "loginStudent",
             "url": "/login",
             "method": "POST",
             "sortNum": 20000,
-            "created": "2024-02-23T00:19:45.397Z",
-            "modified": "2024-02-23T01:11:02.124Z",
+            "created": "2024-03-02T19:34:33.260Z",
+            "modified": "2024-03-02T19:34:33.260Z",
             "headers": [],
             "params": [],
             "body": {
@@ -191,51 +191,116 @@
             "tests": []
         },
         {
-            "_id": "dd5d4ec7-9939-481e-b5a5-cf2f6085598c",
-            "colId": "6fb03afa-afca-452d-a9f8-45e3ef12b24c",
-            "containerId": "89741623-b66e-478d-9d1a-eab44168d265",
+            "_id": "62f2e6b1-abca-4f94-8349-406ab0af5cf7",
+            "colId": "be56b4ca-0065-48aa-8fda-ee4c1998e8ad",
+            "containerId": "c3832267-7414-4fe9-b06e-de2fa3aa43d8",
             "name": "deleteCourse",
-            "url": "localhost:2656/course/delete/65d36c9bb669692092349c6b",
+            "url": "/course/delete/65e38528f8c526e519464c4a",
             "method": "DELETE",
             "sortNum": 30000,
-            "created": "2024-02-23T00:19:45.393Z",
-            "modified": "2024-02-23T00:19:45.393Z",
+            "created": "2024-03-02T19:34:33.257Z",
+            "modified": "2024-03-04T03:20:15.706Z",
             "headers": [
                 {
                     "name": "token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQzNmM1NWI2Njk2OTIwOTIzNDljNjEiLCJ1c2VybmFtZSI6InVzZXIiLCJuYW1lIjoidXNlciIsInJvbGUiOiJURUFDSEVSX1JPTEUiLCJpYXQiOjE3MDgzNTQ2NTUsImV4cCI6MTcwODM2NTQ1NX0.1Y_OXMpr4-KX7fsiKbb2fhUvcQoDTwKrRxWnMWkCLdw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUzODE4OGQ3MGIyYmY2NjQ1ZTAyMGUiLCJ1c2VybmFtZSI6InVzZXIiLCJuYW1lIjoidXNlciIsInJvbGUiOiJURUFDSEVSX1JPTEUiLCJpYXQiOjE3MDk1MTkyMjYsImV4cCI6MTcwOTUzMDAyNn0.RxFXm-arXtZUksEAzdK_rhYYRqkwUBfVBQggi-fsJ5A"
                 }
             ],
             "params": [],
             "tests": []
         },
         {
-            "_id": "da6c6cc1-7b55-41fc-b625-4bbdc854c79f",
-            "colId": "6fb03afa-afca-452d-a9f8-45e3ef12b24c",
-            "containerId": "89741623-b66e-478d-9d1a-eab44168d265",
-            "name": "searchCourse",
-            "url": "/course/search",
+            "_id": "109432f2-f290-4ba4-83c1-b84664c50f07",
+            "colId": "be56b4ca-0065-48aa-8fda-ee4c1998e8ad",
+            "containerId": "1abb2f8f-a380-439a-8a70-f736c6ce61bd",
+            "name": "AssignCourse",
+            "url": "/assingCourse",
             "method": "POST",
-            "sortNum": 40000,
-            "created": "2024-02-23T00:19:45.395Z",
-            "modified": "2024-02-23T00:35:52.875Z",
-            "headers": [
-                {
-                    "name": "token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQ3ZTU2NzUxY2MzMGE5NWQ3MjEyMjYiLCJ1c2VybmFtZSI6InVzZXIiLCJuYW1lIjoidXNlciIsInJvbGUiOiJURUFDSEVSX1JPTEUiLCJpYXQiOjE3MDg2NDgxNDksImV4cCI6MTcwODY1ODk0OX0.7t4d7SLDihA_rtrWfes3gpUUe2I93EmgpgmRxn5m_ro"
-                }
-            ],
+            "sortNum": 50000,
+            "created": "2024-03-02T20:02:47.778Z",
+            "modified": "2024-03-04T02:07:37.508Z",
+            "headers": [],
             "params": [],
             "body": {
                 "type": "formencoded",
                 "raw": "",
                 "form": [
                     {
-                        "name": "search",
-                        "value": "65d7e8349f9572f2ced5891d"
+                        "name": "curso",
+                        "value": "65e38518f8c526e519464c47"
+                    },
+                    {
+                        "name": "students",
+                        "value": "65e381acd70b2bf6645e0211"
                     }
                 ]
             },
+            "tests": []
+        },
+        {
+            "_id": "dfe164fe-3089-42c3-b73f-41f4f5da1d60",
+            "colId": "be56b4ca-0065-48aa-8fda-ee4c1998e8ad",
+            "containerId": "1abb2f8f-a380-439a-8a70-f736c6ce61bd",
+            "name": "GetAssignedCourses",
+            "url": "/getAssignedCourses/65e381acd70b2bf6645e0211",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-03-02T20:35:04.569Z",
+            "modified": "2024-03-02T20:38:54.219Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "dde986fc-1010-4b89-8801-09723e580e19",
+            "colId": "be56b4ca-0065-48aa-8fda-ee4c1998e8ad",
+            "containerId": "1abb2f8f-a380-439a-8a70-f736c6ce61bd",
+            "name": "UpdatePerfil",
+            "url": "/update/65e381acd70b2bf6645e0211",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2024-03-04T02:18:11.646Z",
+            "modified": "2024-03-04T02:19:12.112Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Oliver"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "1cafa7cc-a60e-4d29-95df-8c0afaf1c77f",
+            "colId": "be56b4ca-0065-48aa-8fda-ee4c1998e8ad",
+            "containerId": "1abb2f8f-a380-439a-8a70-f736c6ce61bd",
+            "name": "DeletePerfil",
+            "url": "/delete/65e53008e64280a1ebdc7670",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2024-03-04T02:21:32.637Z",
+            "modified": "2024-03-04T02:21:54.491Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f1040c53-0ff4-4bbe-b37e-c3f794409029",
+            "colId": "be56b4ca-0065-48aa-8fda-ee4c1998e8ad",
+            "containerId": "c3832267-7414-4fe9-b06e-de2fa3aa43d8",
+            "name": "listar curso de profesor",
+            "url": "/course/getCoursesByTeacherId/65e38188d70b2bf6645e020e",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-03-04T03:12:59.647Z",
+            "modified": "2024-03-04T03:13:58.394Z",
+            "headers": [],
+            "params": [],
             "tests": []
         }
     ],

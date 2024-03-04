@@ -10,66 +10,54 @@ export const test = (req, res)=>{
 }
 
 export const assingCourse = async (req, res) => {
-    try {
-        // Capturar la data
-        let data = req.body;
-        
-        // Validar que el curso exista
-        let course = await Course.findOne({_id: data.curso});
-        if (!course) {
-            return res.status(404).send({message: 'Course not found'});
-        }
-        
-        // Validar que el estudiante exista
-        let user = await User.findOne({_id: data.students});
-        if (!user) {
-            return res.status(404).send({message: 'Student not found'});
-        }
-        
+    try{
+        //Capturar la data
+        let data = req.body
+        let course = await Course.findOne({_id: data.curso})
+        if(!course) return res.status(404).send({message: 'Course not found'})
+        let student = await User.findOne({_id: data.students})
+        if(!student) return res.status(404).send({message: 'Student not found'}) 
         const studentId = data.students;
-        
-        // Contar la cantidad de cursos en los que el estudiante está inscrito
+        const courseId = data.curso
+
+        const existingAssignment = await Assignment.findOne({ curso: courseId });
         const courseCount = await Assignment.countDocuments({ students: studentId });
         if (courseCount >= 3) {
-            return res.status(400).send({message: `El estudiante con el id ${studentId} ya está inscrito en 3 cursos.`});
+            return res.status(400).send({message: `El estudiante ya está inscrito en 3 cursos.`});
         }
- 
         // Verificar si el estudiante ya está inscrito en el curso
-        const existingCourse = await Assignment.findOne({ students: studentId, name: data.name });
-        if (existingCourse) {
-            return res.status(400).send({message: `El estudiante con el id ${studentId} ya está inscrito en el curso: ${course.name}.`});
+        if (existingAssignment) {
+            return res.status(400).send({ message: `El estudiante ${student.name} ya está inscrito en el curso: ${course.name}.` });
         }
-        
-        let assignment = new Assignment(data);
-        
-        // Guardar el curso asignado
-        await assignment.save();
-        
-        // Responder al usuario
-        return res.send({message: `Se ha asignado exitosamente al estudiante al curso ${course.name}`});
-    } catch(err) {
-        console.error(err);
-        return res.status(500).send({message: 'Course is not save', err: err});
+        let assing = new Assignment(data)
+        //guardar el animal 
+        await assing.save()
+        //responder al usuario
+        return res.send({message: `El curso se ha registrado exitosamente`})
+    }catch(err){
+        console.error(err)
+        return res.status(500).send({message: 'Course is not save', err: err})
     }
 }
 
 export const getAssignedCourses = async (req, res) => {
     try {
-        // Capturar el ID del estudiante desde la solicitud
-        const studentId = req.params.studentId;
+        // Capturar el ID del alumno desde la solicitud
+        const studentId = req.params.id; // Cambiar a req.params.id
 
-        // Buscar los cursos asignados al estudiante por su ID
-        const assignedCourses = await Assignment.find({ students: studentId }).populate('course');
+        // Buscar los cursos asignados al alumno por su ID
+        const assignedCourses = await Assignment.find({ students: studentId }).populate('curso');
 
-        // Verificar si el estudiante tiene cursos asignados
+        // Verificar si el alumno tiene cursos asignados
         if (assignedCourses.length === 0) {
-            return res.status(404).send({ message: 'El estudiante no tiene cursos asignados.' });
+            return res.status(404).json({ message: 'El alumno no está asignado a ningún curso.' });
         }
 
-        // Enviar los cursos asignados al estudiante
-        return res.send(assignedCourses);
-    } catch(err) {
-        console.error(err);
-        return res.status(500).send({ message: 'Error al obtener los cursos asignados.', err: err });
+        // Enviar los cursos asignados al alumno
+        return res.status(200).json(assignedCourses);
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ message: 'Error al obtener los cursos asignados.', error });
     }
 }
+
